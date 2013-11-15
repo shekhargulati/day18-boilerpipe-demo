@@ -4,10 +4,12 @@ public class Content {
 
     private final String title;
     private final String text;
+    private final String image;
 
-    public Content(String title, String text) {
+    public Content(String title, String text, String image) {
         this.title = title;
         this.text = text;
+        this.image = image;
     }
 
     public String getText() {
@@ -18,10 +20,13 @@ public class Content {
         return title;
     }
 
-    @Override
-    public String toString() {
-        return "Content [title=" + title + ", text=" + text + "]";
+    public String getImage() {
+        return image;
     }
 
-
+    @Override
+    public String toString() {
+        return "Content [title=" + title + ", text=" + text + ", image=" + image + "]";
+    }
+    
 }
