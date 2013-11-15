@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import com.newsapp.service.BoilerpipeContentExtractionService;
 import com.newsapp.service.Content;
 
-@Path("/content")
+@Path("/extract")
 public class ContentExtractionResource {
 
     @Inject

@@ -20,8 +20,7 @@ public class BoilerpipeContentExtractionService {
     public Content content(String url) {
         try {
             final HTMLDocument htmlDoc = HTMLFetcher.fetch(new URL(url));
-            final TextDocument doc = new BoilerpipeSAXInput(htmlDoc.toInputSource())
-                    .getTextDocument();
+            final TextDocument doc = new BoilerpipeSAXInput(htmlDoc.toInputSource()).getTextDocument();
             String title = doc.getTitle();
 
             String content = ArticleExtractor.INSTANCE.getText(doc);
@@ -36,8 +35,8 @@ public class BoilerpipeContentExtractionService {
             if (!images.isEmpty()) {
                 image = images.get(0).getSrc();
             }
-            
-            return new Content(title, content, image);
+
+            return new Content(title, content.substring(0, 200), image);
         } catch (Exception e) {
             return null;
         }
