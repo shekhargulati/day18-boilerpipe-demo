@@ -1,3 +1,4 @@
-The OpenShift `jbosseap` cartridge documentation can be found at:
+boilerpipe-demo
+===============
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbosseap/README.md
+boilerpipe API demo
